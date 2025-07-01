@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom"
-import ResponsiveAppBar from '../Components/navBar'
+import ResponsiveAppBar from '../components/navBar'
+import { Carousel } from "../components/carousel"
+
 import Box from '@mui/material/Box'
-import Stack from '@mui/material/Stack'
-import Card from '@mui/material/Card'
 import './home.css'
+import { slides } from "./data/carouselData.json"
+
 
 export function Home() {
-
     return (
         <>
             <ResponsiveAppBar/>
@@ -39,9 +39,10 @@ export function Home() {
                     </p>
                 </div>
             </Box>
-               
-            <Box component="span" sx={{ display: 'block' }}>carousel</Box>
-             <Box
+            <Box sx={{ bgcolor: 'grey', alignItems: "center" }}>
+                <Carousel data={slides}/>
+            </Box>
+            <Box
                 className="nameBox"
                 sx={{
                     padding: 7,
@@ -62,13 +63,10 @@ export function Home() {
                 </div>
             </Box>
                
-            <Box component="span" sx={{ display: 'block' }}>carousel</Box>
+            <Carousel data={slides}/>
 
 
-            <h1>This is the Home page!</h1>
-            <Link to="/">Home</Link>
-            <Link to="/GaussianSplat">GaussianSplat</Link>
-            <Link to="/VisionOS">VisionOS</Link>
+        
 
         </>
     )
