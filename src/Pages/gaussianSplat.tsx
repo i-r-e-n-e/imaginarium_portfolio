@@ -1,4 +1,4 @@
-import ResponsiveAppBar from '../components/navBar'
+import ResponsiveAppBar from '../Components/navBar'
 import Box from '@mui/material/Box'
 
 export function GaussianSplat() {
