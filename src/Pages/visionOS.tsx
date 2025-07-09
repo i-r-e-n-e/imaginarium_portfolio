@@ -18,61 +18,59 @@ import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import RssFeedRoundedIcon from '@mui/icons-material/RssFeedRounded';
 
 
-
+// we probalbly want github link on a separate field
 const cardData = [
   {
     img: 'https://picsum.photos/800/450?random=1',
-    tag: 'Engineering',
-    title: 'Kristy\'s cookie box',
+    tag: 'Fun',
+    title: 'Colorful balls falling',
     description:
-      'Our latest engineering tools are designed to streamline workflows and boost productivity. Discover how these innovations are transforming the software development landscape.',
+      'Colorful balls falling from the sky, and picture expanding into the screen and collapsing away. https://github.com/izzygperez/colorful-balls-with-image-creation',
     authors: [
-      { name: 'Kristy ', avatar: '/static/images/avatar/1.jpg' },
-      { name: 'Travis Howard', avatar: '/static/images/avatar/2.jpg' },
+      { name: 'Izzy Perez', avatar: '/static/images/avatar/1.jpg' },
     ],
   },
   {
     img: 'https://picsum.photos/800/450?random=2',
-    tag: 'Product',
-    title: 'Irene\'s Hello Kitty',
+    tag: 'Fun',
+    title: 'Hidden Box',
     description:
-      'Explore the key features of our latest product release that are helping businesses achieve their goals. From user-friendly interfaces to robust functionality, learn why our product stands out.',
-    authors: [{ name: 'Irene Chen', avatar: '/static/images/avatar/6.jpg' }],
+      'A box with invisible external walls, when top is pressed opens to show objects inside. https://github.com/izzygperez/xcode-hidden-box',
+    authors: [{ name: 'Izzy Perez', avatar: '/static/images/avatar/6.jpg' }],
   },
   {
     img: 'https://picsum.photos/800/450?random=3',
-    tag: 'Design',
-    title: 'Designing for the future: trends and insights',
+    tag: 'Fun',
+    title: 'Bubbles',
     description:
-      'Stay ahead of the curve with the latest design trends and insights. Our design team shares their expertise on creating intuitive and visually stunning user experiences.',
-    authors: [{ name: 'Kate Morrison', avatar: '/static/images/avatar/7.jpg' }],
+      'Generates bubbles in virtual space that user can pop. https://github.com/Riana-S/Bubbles-visionOS',
+    authors: [{ name: 'Riana Santos', avatar: '/static/images/avatar/7.jpg' }],
   },
   {
     img: 'https://picsum.photos/800/450?random=4',
-    tag: 'Company',
-    title: "Our company's journey: milestones and achievements",
+    tag: 'Utility',
+    title: "Guitar Chord Heads Up Display",
     description:
-      "Take a look at our company's journey and the milestones we've achieved along the way. From humble beginnings to industry leader, discover our story of growth and success.",
-    authors: [{ name: 'Cindy Baker', avatar: '/static/images/avatar/3.jpg' }],
+      "A Passthrough heads-up display that shows live chords and lyrics to songs. NO GITHUB",
+    authors: [{ name: 'Beatrice Hackman', avatar: '/static/images/avatar/3.jpg' }],
   },
   {
     img: 'https://picsum.photos/800/450?random=45',
-    tag: 'Engineering',
-    title: 'Pioneering sustainable engineering solutions',
+    tag: 'Fun',
+    title: 'Portal Doors',
     description:
-      "Learn about our commitment to sustainability and the innovative engineering solutions we're implementing to create a greener future. Discover the impact of our eco-friendly initiatives.",
+      "Inspired by the movie Dr. Strange, program generates three portal doors that allow user to peer into a different environment around the world. https://github.com/Riana-S/RotundaGateway",
     authors: [
-      { name: 'Agnes Walker', avatar: '/static/images/avatar/4.jpg' },
-      { name: 'Trevor Henderson', avatar: '/static/images/avatar/5.jpg' },
+      { name: 'Riana Santos', avatar: '/static/images/avatar/4.jpg' },
     ],
   },
   {
     img: 'https://picsum.photos/800/450?random=6',
-    tag: 'Product',
-    title: 'Maximizing efficiency with our latest product updates',
+    tag: 'Fun',
+    title: 'Disco Ball',
     description:
-      'Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.',
-    authors: [{ name: 'Travis Howard', avatar: '/static/images/avatar/2.jpg' }],
+      'A Disco ball light effect created in RealityComposerPro in a water-like material. https://github.com/MeguKanzawa/DiscoBall2',
+    authors: [{ name: 'Megu Kanzawa', avatar: '/static/images/avatar/2.jpg' }],
   },
 ];
 
@@ -229,204 +227,93 @@ export function VisionOS() {
             }}
         >
         </Box>
+        <Box
+            sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', md: 'row' },
+                alignItems: 'center',
+                gap: 2,
+            }}
+        >
+            <Box sx={{ flex: 1 }}>
+                <img
+                    src="https://cdn.abcotvs.com/dip/images/14296939_apple-vision-pro-getty-img.jpg"
+                    alt="Image of an Apple Vision Pro"
+                    style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+                />
+            </Box>
+            <Box sx={{ flex: 1 }}>
+                <Typography variant="h4" gutterBottom>
+                    What is the Apple Vision Pro?
+                </Typography>
+                <Typography variant="body1">
+                    The Apple Vision Pro is Apple's first headset device. It is redefining the possibilities of mixed reality and spatial computing.
+                    <br/>
+                    <br/>
+                    It runs VisionOS, a custom operating system with support for developers to build their own immersive experiences.
+                </Typography>
+            </Box>
+        </Box>
+
+        {/* section header */}
+        <Box
+            sx={{
+                width: '100%',
+                backgroundColor: 'lightgray',
+                padding: 2,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
+        >
+            <Typography variant="h4" component="div" sx={{ fontWeight: 'bold' }}>
+                Our Projects
+            </Typography>
+        </Box>
+
+
 
     
         <Grid container spacing={2} columns={12}> 
-            <Grid size={{ xs: 12, md: 6 }}>
-            <SyledCard
-                variant="outlined"
-                onFocus={() => handleFocus(0)}
-                onBlur={handleBlur}
-                tabIndex={0}
-                className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
-            >
-                <CardMedia
-                component="img"
-                alt={cardData[0].title}
-                image={cardData[0].img}
-                sx={{
-                    aspectRatio: '16 / 9',
-                    borderBottom: '1px solid',
-                    borderColor: 'divider',
-                }}
-                />
-                <SyledCardContent>
-                <Typography gutterBottom variant="caption" component="div">
-                    {cardData[0].tag}
-                </Typography>
-                <Typography gutterBottom variant="h6" component="div">
-                    {cardData[0].title}
-                </Typography>
-                <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                    {cardData[0].description}
-                </StyledTypography>
-                </SyledCardContent>
-                <Author authors={cardData[0].authors} />
-            </SyledCard>
-            </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
-            <SyledCard
-                variant="outlined"
-                onFocus={() => handleFocus(1)}
-                onBlur={handleBlur}
-                tabIndex={0}
-                className={focusedCardIndex === 1 ? 'Mui-focused' : ''}
-            >
-                <CardMedia
-                component="img"
-                alt={cardData[1].title}
-                image={cardData[1].img}
-                aspect-ratio="16 / 9"
-                sx={{
-                    borderBottom: '1px solid',
-                    borderColor: 'divider',
-                }}
-                />
-                <SyledCardContent>
-                <Typography gutterBottom variant="caption" component="div">
-                    {cardData[1].tag}
-                </Typography>
-                <Typography gutterBottom variant="h6" component="div">
-                    {cardData[1].title}
-                </Typography>
-                <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                    {cardData[1].description}
-                </StyledTypography>
-                </SyledCardContent>
-                <Author authors={cardData[1].authors} />
-            </SyledCard>
-            </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
-            <SyledCard
-                variant="outlined"
-                onFocus={() => handleFocus(1)}
-                onBlur={handleBlur}
-                tabIndex={0}
-                className={focusedCardIndex === 1 ? 'Mui-focused' : ''}
-            >
-                <CardMedia
-                component="img"
-                alt={cardData[1].title}
-                image={cardData[1].img}
-                aspect-ratio="16 / 9"
-                sx={{
-                    borderBottom: '1px solid',
-                    borderColor: 'divider',
-                }}
-                />
-                <SyledCardContent>
-                <Typography gutterBottom variant="caption" component="div">
-                    {cardData[1].tag}
-                </Typography>
-                <Typography gutterBottom variant="h6" component="div">
-                    {cardData[1].title}
-                </Typography>
-                <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                    {cardData[1].description}
-                </StyledTypography>
-                </SyledCardContent>
-                <Author authors={cardData[1].authors} />
-            </SyledCard>
-            </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
-            <SyledCard
-                variant="outlined"
-                onFocus={() => handleFocus(1)}
-                onBlur={handleBlur}
-                tabIndex={0}
-                className={focusedCardIndex === 1 ? 'Mui-focused' : ''}
-            >
-                <CardMedia
-                component="img"
-                alt={cardData[1].title}
-                image={cardData[1].img}
-                aspect-ratio="16 / 9"
-                sx={{
-                    borderBottom: '1px solid',
-                    borderColor: 'divider',
-                }}
-                />
-                <SyledCardContent>
-                <Typography gutterBottom variant="caption" component="div">
-                    {cardData[1].tag}
-                </Typography>
-                <Typography gutterBottom variant="h6" component="div">
-                    {cardData[1].title}
-                </Typography>
-                <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                    {cardData[1].description}
-                </StyledTypography>
-                </SyledCardContent>
-                <Author authors={cardData[1].authors} />
-            </SyledCard>
-            </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
-            <SyledCard
-                variant="outlined"
-                onFocus={() => handleFocus(1)}
-                onBlur={handleBlur}
-                tabIndex={0}
-                className={focusedCardIndex === 1 ? 'Mui-focused' : ''}
-            >
-                <CardMedia
-                component="img"
-                alt={cardData[1].title}
-                image={cardData[1].img}
-                aspect-ratio="16 / 9"
-                sx={{
-                    borderBottom: '1px solid',
-                    borderColor: 'divider',
-                }}
-                />
-                <SyledCardContent>
-                <Typography gutterBottom variant="caption" component="div">
-                    {cardData[1].tag}
-                </Typography>
-                <Typography gutterBottom variant="h6" component="div">
-                    {cardData[1].title}
-                </Typography>
-                <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                    {cardData[1].description}
-                </StyledTypography>
-                </SyledCardContent>
-                <Author authors={cardData[1].authors} />
-            </SyledCard>
-            </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
-            <SyledCard
-                variant="outlined"
-                onFocus={() => handleFocus(1)}
-                onBlur={handleBlur}
-                tabIndex={0}
-                className={focusedCardIndex === 1 ? 'Mui-focused' : ''}
-            >
-                <CardMedia
-                component="img"
-                alt={cardData[1].title}
-                image={cardData[1].img}
-                aspect-ratio="16 / 9"
-                sx={{
-                    borderBottom: '1px solid',
-                    borderColor: 'divider',
-                }}
-                />
-                <SyledCardContent>
-                <Typography gutterBottom variant="caption" component="div">
-                    {cardData[1].tag}
-                </Typography>
-                <Typography gutterBottom variant="h6" component="div">
-                    {cardData[1].title}
-                </Typography>
-                <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                    {cardData[1].description}
-                </StyledTypography>
-                </SyledCardContent>
-                <Author authors={cardData[1].authors} />
-            </SyledCard>
-            </Grid>
-        
-            
-    
+                {cardData.map((card, index) => (
+                    <Grid key={index} size={{ xs: 12, md: 6 }}>
+                        <SyledCard
+                            variant="outlined"
+                            onFocus={() => handleFocus(index)}
+                            onBlur={handleBlur}
+                            tabIndex={index}
+                            className={focusedCardIndex === index ? 'Mui-focused' : ''}
+                        >
+                            <CardMedia
+                                component="img"
+                                image={card.img}
+                                alt={card.title}
+                                sx={{
+                                    aspectRatio: '16 / 9',
+                                    borderBottom: '1px solid',
+                                    borderColor: 'divider',
+                                }}
+                            />
+                            <SyledCardContent>
+                                <Typography gutterBottom variant="caption" component="div">
+                                    {cardData[0].tag}
+                                </Typography>
+                                <Typography variant="h5" gutterBottom>
+                                    {card.title}
+                                </Typography>
+                                <Typography variant="body2" gutterBottom>
+                                    {card.description}
+                                </Typography>
+                                <AvatarGroup max={3}>
+                                    {card.authors.map((author) => (
+                                        <Avatar key={author.name} src={author.avatar} alt={author.name} />
+                                    ))}
+                                </AvatarGroup>
+                            </SyledCardContent>
+                        </SyledCard>
+                    </Grid>
+                )
+            )}
         </Grid>
         </Box>
     </>
