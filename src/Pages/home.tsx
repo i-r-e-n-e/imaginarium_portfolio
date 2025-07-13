@@ -1,5 +1,5 @@
-import ResponsiveAppBar from '../Components/navBar'
-import { Carousel } from "../Components/carousel"
+import ResponsiveAppBar from '../components/navBar'
+import { Carousel } from "../components/carousel"
 
 import Box from '@mui/material/Box'
 import './home.css'

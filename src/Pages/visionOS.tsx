@@ -1,4 +1,4 @@
-import ResponsiveAppBar from '../Components/navBar'
+import ResponsiveAppBar from '../components/navBar'
 import Box from '@mui/material/Box'
 
 export function VisionOS() {

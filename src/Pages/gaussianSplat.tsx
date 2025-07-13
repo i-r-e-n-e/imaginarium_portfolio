@@ -1,4 +1,4 @@
-import ResponsiveAppBar from '../Components/navBar'
+import ResponsiveAppBar from '../components/navBar'
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
@@ -145,47 +145,6 @@ function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
     </Box>
   );
 }
-
-
-
-// export function GaussianSplat() {
-//     return (
-//         <>
-//             <ResponsiveAppBar/>  
-//             <Box 
-//                 className="pictureBox" 
-//                 sx={{
-//                     padding: 7
-//                 }}
-//             >
-//                 <h1>Gausssian Splat</h1>
-//             </Box>
-//             <Card/>
-//             <Box
-//                 className="nameBox"
-//                 sx={{
-//                     padding: 7,
-//                     display: 'flex',
-//                     justifyContent: 'space-between',
-//                     alignItems: 'center',
-//                 }}
-//             >
-//                 <div>
-//                     <h2>
-//                         Gaussian Splat
-//                     </h2>
-//                 </div>
-//                 <div>
-//                     <p>
-//                         3D modeling of objects and spaces using gaussian splats
-//                     </p>
-//                 </div>
-//             </Box>
-    
-//         </>
-//     )
-// }
-
 
 
 
