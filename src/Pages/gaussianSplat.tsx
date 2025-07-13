@@ -6,33 +6,25 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import FormControl from '@mui/material/FormControl';
-import InputAdornment from '@mui/material/InputAdornment';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import { styled } from '@mui/material/styles';
-import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
-import RssFeedRoundedIcon from '@mui/icons-material/RssFeedRounded';
 
 
 
 const cardData = [
   {
-    img: 'https://picsum.photos/800/450?random=1',
+    img: '/images/kristy-cookie-box.png',
     tag: 'Engineering',
     title: 'Kristy\'s cookie box',
     description:
       'Our latest engineering tools are designed to streamline workflows and boost productivity. Discover how these innovations are transforming the software development landscape.',
     authors: [
       { name: 'Kristy ', avatar: '/static/images/avatar/1.jpg' },
-      { name: 'Travis Howard', avatar: '/static/images/avatar/2.jpg' },
     ],
   },
   {
-    img: 'https://picsum.photos/800/450?random=2',
+    img: '/images/irene-hello-kitty.png',
     tag: 'Product',
     title: 'Irene\'s Hello Kitty',
     description:
@@ -40,39 +32,86 @@ const cardData = [
     authors: [{ name: 'Irene Chen', avatar: '/static/images/avatar/6.jpg' }],
   },
   {
-    img: 'https://picsum.photos/800/450?random=3',
+    img: '/images/tierney-smisky.png',
     tag: 'Design',
-    title: 'Designing for the future: trends and insights',
+    title: 'Tierney\'s smiskis',
     description:
       'Stay ahead of the curve with the latest design trends and insights. Our design team shares their expertise on creating intuitive and visually stunning user experiences.',
-    authors: [{ name: 'Kate Morrison', avatar: '/static/images/avatar/7.jpg' }],
+    authors: [{ name: 'Tierney', avatar: '/static/images/avatar/7.jpg' }],
   },
   {
-    img: 'https://picsum.photos/800/450?random=4',
+    img: '/images/tayo-statue.png',
     tag: 'Company',
-    title: "Our company's journey: milestones and achievements",
+    title: "Tayo\'s Statue",
     description:
       "Take a look at our company's journey and the milestones we've achieved along the way. From humble beginnings to industry leader, discover our story of growth and success.",
-    authors: [{ name: 'Cindy Baker', avatar: '/static/images/avatar/3.jpg' }],
+    authors: [{ name: 'Tayo', avatar: '/static/images/avatar/3.jpg' }],
   },
   {
-    img: 'https://picsum.photos/800/450?random=45',
+    img: '/images/ryan-luigi.png',
     tag: 'Engineering',
-    title: 'Pioneering sustainable engineering solutions',
+    title: 'Ryan\'s Luigi',
     description:
       "Learn about our commitment to sustainability and the innovative engineering solutions we're implementing to create a greener future. Discover the impact of our eco-friendly initiatives.",
     authors: [
-      { name: 'Agnes Walker', avatar: '/static/images/avatar/4.jpg' },
-      { name: 'Trevor Henderson', avatar: '/static/images/avatar/5.jpg' },
+      { name: 'Ryan', avatar: '/static/images/avatar/4.jpg' },
     ],
   },
   {
-    img: 'https://picsum.photos/800/450?random=6',
+    img: '/images/james-chair.png',
     tag: 'Product',
-    title: 'Maximizing efficiency with our latest product updates',
+    title: 'James\' chair',
     description:
       'Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.',
-    authors: [{ name: 'Travis Howard', avatar: '/static/images/avatar/2.jpg' }],
+    authors: [{ name: 'James', avatar: '/static/images/avatar/2.jpg' }],
+  },
+  {
+    img: '/images/trisha-jar.png',
+    tag: 'Product',
+    title: 'Trisha\'s jar',
+    description:
+      'Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.',
+    authors: [{ name: 'Trisha', avatar: '/static/images/avatar/2.jpg' }],
+  },
+  {
+    img: '/images/julianna-pancake.png',
+    tag: 'Product',
+    title: 'Julianna\'s pancake',
+    description:
+      'Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.',
+    authors: [{ name: 'Julianna', avatar: '/static/images/avatar/2.jpg' }],
+  },
+  {
+    img: '/images/james-tree.png',
+    tag: 'Product',
+    title: 'James\' tree',
+    description:
+      'Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.',
+    authors: [{ name: 'James', avatar: '/static/images/avatar/2.jpg' }],
+  },
+  {
+    img: '/images/james-fountain.png',
+    tag: 'Product',
+    title: 'James\' fountain',
+    description:
+      'Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.',
+    authors: [{ name: 'James', avatar: '/static/images/avatar/2.jpg' }],
+  },
+  {
+    img: '/images/vrushabh-wet-wipe.png',
+    tag: 'Product',
+    title: 'Vrushabh\'s wet wipe',
+    description:
+      'Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.',
+    authors: [{ name: 'Vrushabh', avatar: '/static/images/avatar/2.jpg' }],
+  },
+  {
+    img: '/images/trisha-bacardi.png',
+    tag: 'Product',
+    title: 'Trisha\'s bacardi',
+    description:
+      'Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.',
+    authors: [{ name: 'Trisha', avatar: '/static/images/avatar/2.jpg' }],
   },
 ];
 
