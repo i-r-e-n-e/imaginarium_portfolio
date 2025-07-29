@@ -2,9 +2,9 @@ import './App.css'
 
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 
-import { Home } from './Pages/home'
-import { GaussianSplat } from './Pages/gaussianSplat'
-import { VisionOS } from './Pages/visionOS'
+import { Home } from './pages/home'
+import { GaussianSplat } from './pages/gaussianSplat'
+import { VisionOS } from './pages/visionOS'
 
 function App() {
 

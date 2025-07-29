@@ -1,21 +1,16 @@
-import ResponsiveAppBar from '../Components/navBar'
+import ResponsiveAppBar from '../components/navBar'
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import FormControl from '@mui/material/FormControl';
-import InputAdornment from '@mui/material/InputAdornment';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import { styled } from '@mui/material/styles';
-import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
-import RssFeedRoundedIcon from '@mui/icons-material/RssFeedRounded';
+
 
 
 // we probalbly want github link on a separate field
@@ -124,7 +119,7 @@ function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
     >
       <Box
         sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}
-      >
+      >  
         <AvatarGroup max={3}>
           {authors.map((author, index) => (
             <Avatar
@@ -139,52 +134,11 @@ function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
           {authors.map((author) => author.name).join(', ')}
         </Typography>
       </Box>
+      
       <Typography variant="caption">July 14, 2021</Typography>
     </Box>
   );
 }
-
-
-
-// export function GaussianSplat() {
-//     return (
-//         <>
-//             <ResponsiveAppBar/>  
-//             <Box 
-//                 className="pictureBox" 
-//                 sx={{
-//                     padding: 7
-//                 }}
-//             >
-//                 <h1>Gausssian Splat</h1>
-//             </Box>
-//             <Card/>
-//             <Box
-//                 className="nameBox"
-//                 sx={{
-//                     padding: 7,
-//                     display: 'flex',
-//                     justifyContent: 'space-between',
-//                     alignItems: 'center',
-//                 }}
-//             >
-//                 <div>
-//                     <h2>
-//                         Gaussian Splat
-//                     </h2>
-//                 </div>
-//                 <div>
-//                     <p>
-//                         3D modeling of objects and spaces using gaussian splats
-//                     </p>
-//                 </div>
-//             </Box>
-    
-//         </>
-//     )
-// }
-
-
 
 
 
@@ -233,6 +187,7 @@ export function VisionOS() {
                 flexDirection: { xs: 'column', md: 'row' },
                 alignItems: 'center',
                 gap: 2,
+                p: 5,
             }}
         >
             <Box sx={{ flex: 1 }}>
@@ -270,52 +225,51 @@ export function VisionOS() {
                 Our Projects
             </Typography>
         </Box>
+        <Box sx={{ px: { xs: 2, sm: 4, md: 6 }}}> 
+          <Grid container spacing={2} columns={12}> 
+                  {cardData.map((card, index) => (
+                      <Grid key={index} size={{ xs: 12, md: 6 }}>
+                          <SyledCard
+                              variant="outlined"
+                              onFocus={() => handleFocus(index)}
+                              onBlur={handleBlur}
+                              tabIndex={index}
+                              className={focusedCardIndex === index ? 'Mui-focused' : ''}
+                          >
+                              <CardMedia
+                                  component="img"
+                                  image={card.img}
+                                  alt={card.title}
+                                  sx={{
+                                      aspectRatio: '16 / 9',
+                                      borderBottom: '1px solid',
+                                      borderColor: 'divider',
+                                  }}
+                              />
+                              <SyledCardContent>
+                                  <Typography gutterBottom variant="caption" component="div">
+                                      {cardData[0].tag}
+                                  </Typography>
+                                  <Typography variant="h5" gutterBottom>
+                                      {card.title}
+                                  </Typography>
+                                  <Typography variant="body2" gutterBottom>
+                                      {card.description}
+                                  </Typography>
+                                  <AvatarGroup max={3}>
+                                      {card.authors.map((author) => (
+                                          <Avatar key={author.name} src={author.avatar} alt={author.name} />
+                                      ))}
+                                  </AvatarGroup>
 
-
-
-    
-        <Grid container spacing={2} columns={12}> 
-                {cardData.map((card, index) => (
-                    <Grid key={index} size={{ xs: 12, md: 6 }}>
-                        <SyledCard
-                            variant="outlined"
-                            onFocus={() => handleFocus(index)}
-                            onBlur={handleBlur}
-                            tabIndex={index}
-                            className={focusedCardIndex === index ? 'Mui-focused' : ''}
-                        >
-                            <CardMedia
-                                component="img"
-                                image={card.img}
-                                alt={card.title}
-                                sx={{
-                                    aspectRatio: '16 / 9',
-                                    borderBottom: '1px solid',
-                                    borderColor: 'divider',
-                                }}
-                            />
-                            <SyledCardContent>
-                                <Typography gutterBottom variant="caption" component="div">
-                                    {cardData[0].tag}
-                                </Typography>
-                                <Typography variant="h5" gutterBottom>
-                                    {card.title}
-                                </Typography>
-                                <Typography variant="body2" gutterBottom>
-                                    {card.description}
-                                </Typography>
-                                <AvatarGroup max={3}>
-                                    {card.authors.map((author) => (
-                                        <Avatar key={author.name} src={author.avatar} alt={author.name} />
-                                    ))}
-                                </AvatarGroup>
-                            </SyledCardContent>
-                        </SyledCard>
-                    </Grid>
-                )
-            )}
-        </Grid>
+                              </SyledCardContent>
+                          </SyledCard>
+                      </Grid>
+                  )
+              )}
+          </Grid>
         </Box>
+      </Box>
     </>
   );
 }
