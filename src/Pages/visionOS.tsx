@@ -21,7 +21,7 @@ import RssFeedRoundedIcon from '@mui/icons-material/RssFeedRounded';
 // we probalbly want github link on a separate field
 const cardData = [
   {
-    img: 'https://picsum.photos/800/450?random=1',
+    img: '/images/Izzy-colorful-balls.png',
     tag: 'Fun',
     title: 'Colorful balls falling',
     description:
@@ -31,7 +31,7 @@ const cardData = [
     ],
   },
   {
-    img: 'https://picsum.photos/800/450?random=2',
+    img: '/images/Izzy-hidden-box.png',
     tag: 'Fun',
     title: 'Hidden Box',
     description:
@@ -39,7 +39,7 @@ const cardData = [
     authors: [{ name: 'Izzy Perez', avatar: '/static/images/avatar/6.jpg' }],
   },
   {
-    img: 'https://picsum.photos/800/450?random=3',
+    img: '/images/Riana-bubbles.png',
     tag: 'Fun',
     title: 'Bubbles',
     description:
@@ -55,7 +55,7 @@ const cardData = [
     authors: [{ name: 'Beatrice Hackman', avatar: '/static/images/avatar/3.jpg' }],
   },
   {
-    img: 'https://picsum.photos/800/450?random=45',
+    img: '/images/Riana-portal-doors.png',
     tag: 'Fun',
     title: 'Portal Doors',
     description:
@@ -65,7 +65,7 @@ const cardData = [
     ],
   },
   {
-    img: 'https://picsum.photos/800/450?random=6',
+    img: '/images/megu-disco-ball.png',
     tag: 'Fun',
     title: 'Disco Ball',
     description:
