@@ -12,6 +12,7 @@ import { styled } from '@mui/material/styles';
 
 
 
+
 const cardData = [
   {
     img: '/images/kristy-cookie-box.png',
@@ -228,7 +229,59 @@ export function GaussianSplat() {
         >
         </Box>
 
-    
+        <Box
+            sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', md: 'row' },
+                alignItems: 'center',
+                gap: 2,
+                p: 5,
+            }}
+        >
+            <Box sx={{ flex: 1 }}>
+                <img
+                    src="https://cdn.abcotvs.com/dip/images/14296939_apple-vision-pro-getty-img.jpg"
+                    alt="Image of an Apple Vision Pro"
+                    style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+                />
+            </Box>
+            <Box sx={{ flex: 1 }}>
+                <Typography variant="h4" gutterBottom>
+                    What is the Gaussian Splatting?
+                </Typography>
+                <Typography variant="body1">
+                    The Apple Vision Pro is Apple's first headset device. It is redefining the possibilities of mixed reality and spatial computing.
+                    <br/>
+                    <br/>
+                    It runs VisionOS, a custom operating system with support for developers to build their own immersive experiences.
+                </Typography>
+            </Box>
+        </Box>
+
+        {/* section header */}
+          <Box
+            sx={{
+              width: '100%',
+                backgroundColor: 'lightgray',
+                padding: 2,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
+        >
+            <Typography variant="h4" component="div" sx={{ fontWeight: 'bold' }}>
+                Our Projects
+            </Typography>
+        </Box>
+        {/* <Canvas>
+          <ambientLight>
+            <Suspense fallback={null}>
+              <HelloKitty/>
+            </Suspense>
+          </ambientLight>
+          
+        </Canvas> */}
+
         <Grid container spacing={2} columns={12}> 
                 {cardData.map((card, index) => (
                     <Grid key={index} size={{ xs: 12, md: 6 }}>
