@@ -1,4 +1,4 @@
-import ResponsiveAppBar from '../components/navBar'
+import Navigation from '../components/navigation'
 import { Carousel } from "../components/carousel"
 import CardCarousel from "../components/card_slider"
 
@@ -10,7 +10,7 @@ import { slides } from "./data/carouselData.json"
 export function Home() {
     return (
         <>
-            <ResponsiveAppBar/>
+            <Navigation />
             <Box 
                 className="pictureBox" 
                 sx={{
