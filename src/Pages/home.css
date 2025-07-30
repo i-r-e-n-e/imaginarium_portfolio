@@ -8,13 +8,13 @@
 
 .pictureBox h1 {
     text-align: center; 
-    font-family: 'docs-DM Sans', Arial;
+    font-family: Arial;
     font-weight: 700;
 }
 
 .pictureBox p {
     text-align: center;
-    font-family: 'docs-DM Sans', Arial;
+    font-family: Arial;
     font-weight: 400;
     vertical-align: baseline;
 }
@@ -25,9 +25,14 @@
 }
 
 .nameBox h2 {
-    font-family: 'docs-DM Sans', Arial;
+    font-family: Arial;
     font-size: 40px;
     font-style: italic;
     font-weight: 700;
     vertical-align: baseline;
+    color: white;
+}
+
+.nameBox p {
+    color: white;
 }
