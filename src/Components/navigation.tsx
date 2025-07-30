@@ -21,7 +21,7 @@ const pages = [
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function ResponsiveAppBar() {
+function Navigation() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -59,7 +59,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            Imaginarium: New Realities
+            Imaginarium
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -112,7 +112,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            Imaginarium: New Realities
+            Imaginarium
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -161,4 +161,6 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Navigation;
+
+

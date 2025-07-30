@@ -1,4 +1,4 @@
-import ResponsiveAppBar from '../components/navBar'
+import Navigation from '../components/navigation'
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
@@ -208,7 +208,7 @@ export function GaussianSplat() {
 
   return (
     <>
-        <ResponsiveAppBar/>
+        <Navigation/>
         <Box 
                 className="pictureBox" 
                 sx={{
