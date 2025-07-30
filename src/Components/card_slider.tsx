@@ -47,13 +47,14 @@ export default function CardCarousel() {
           scrollSnapType: 'x mandatory',
           scrollBehavior: 'smooth',
           WebkitOverflowScrolling: 'touch',
+          scrollbarWidth: 'none', // gets rid of the scroll bar at the bottom
         }}
       >
         {cardData.map((card, index) => (
           <Box
             key={index}
             sx={{
-              minWidth: 280,
+              minWidth: 400,
               flexShrink: 0,
               scrollSnapAlign: 'start',
             }}
@@ -61,7 +62,7 @@ export default function CardCarousel() {
             <Card sx={{ borderRadius: 2, height: '100%' }}>
               <CardMedia
                 component="img"
-                height="160"
+                height="240"
                 image={card.img}
                 alt={card.title}
               />
